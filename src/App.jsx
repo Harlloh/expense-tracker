@@ -9,7 +9,8 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import Welcome from "./pages/HomeScreen/Welcome";
+import Welcome from "./pages/WelcomeScreen/Welcome";
+import Home from "./pages/HomeScreen.jsx/Home";
 
 function App() {
   const router = createBrowserRouter(
@@ -18,10 +19,12 @@ function App() {
         <Route exact path="/" element={<RootLayout />}>
           <Route exact index element={<Welcome />} />
           <Route exact path="login" element={<Login />} />
+          <Route exact path="home" element={<Home />} />
         </Route>
       </Route>
     )
   );
+
   return (
     <>
       <RouterProvider router={router} />
