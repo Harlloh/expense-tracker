@@ -11,36 +11,17 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const navigate = useNavigate();
   const handleSignIn = async () => {
-    const result = await signInWithPopup(auth, provider);
-    const userInfo = {
-      userId: result.user.uid,
-      name: result.user.displayName,
-      profilePhoto: result.user.photoURL,
-      isAuth: true,
-    };
-    Cookies.set(userInfo);
+    // const result = await signInWithPopup(auth, provider);
+    // const userInfo = {
+    //   userId: result.user.uid,
+    //   name: result.user.displayName,
+    //   profilePhoto: result.user.photoURL,
+    //   isAuth: true,
+    // };
+    // Cookies.set(userInfo);
     navigate("/home");
   };
   return (
-    // <div className="login-div">
-    //   <Stack
-    //     direction="column"
-    //     gap="2rem"
-    //     sx={{ background: " #FFF", width: "inherit" }}
-    //   >
-    //     <Box className="login-image-div">
-    //       {/* Add a span element for the drop shadow */}
-    //
-    //       <span className="login-image-shadow"></span>
-    //     </Box>
-    //     <Stack direction="column">
-    //       <h1 className="login-hero">
-    //         Spend smarter <br /> save more
-    //       </h1>
-    //
-    //     </Stack>
-    //   </Stack>
-    // </div>
     <div className="login-div">
       <div className="login-image-div">
         <Img

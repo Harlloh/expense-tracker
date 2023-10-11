@@ -1,0 +1,31 @@
+.shape{
+    width: 25.875rem;
+    height: 17.9375rem;
+    flex-shrink: 0;
+    background: linear-gradient(139deg, #429690 -4.35%, #2A7C76 100.15%);
+    border-radius:  0 0 8.5rem 8.5rem;
+    position: relative;
+}
+.circles1, .circles2,.circles3{
+    position: absolute;
+    /* width: 5.3125rem;
+        height: 5.3125rem;
+        flex-shrink: 0;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.00) 6.82%, rgba(255, 255, 255, 0.70) 114.2%);
+            opacity: 0.1; */
+}
+.circles3{
+    top: 10%;
+    left: 15%;
+
+}
+.circles2{
+    top: 10%;
+    left: 35%;
+
+}
+.circles1{
+    top: 10%;
+    left: 55%;
+
+}

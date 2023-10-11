@@ -4,3 +4,77 @@
   padding: 0;
   box-sizing: border-box;
  }
+ .appLayout{
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+/* 
+ body{
+    overflow-x: hidden;
+ } */
+ .navbar{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: #FFF;
+      box-shadow: 0px -2px 25px 0px rgba(0, 0, 0, 0.04);
+      width: 25.875rem;
+         height: 5rem;
+   /* background-color: red; */
+ }
+ .navbar a svg{
+   color:#AAAAAA;
+   font-size: 3rem;
+ }
+ .navbar a.active svg{
+   color: #408782;
+ }
+ .profileNwallet, .homeNStat{
+   display: flex;
+   justify-content: space-around;
+   gap: .5rem;
+   width: 50%;
+ }
+
+ .usercard{
+  border-radius: 1.25rem;
+    background: #2F7E79;
+    width: 23.375rem;
+      height: 12.5625rem;
+      flex-shrink: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+      gap: 1rem;
+      box-shadow: 0px 20px 20px #2f7e7994;
+ }
+ .expenseNIncome{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+ .income, .expense{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+ }
+    .income span,
+    .expense span{
+      display: flex;
+      gap: .4rem;
+    }
+ .income h2, .expense h2{
+  width: 100%;
+  flex: 1;
+ }
+ .income svg, .expense svg{
+  /* font-size: 30rem; */
+  padding: .2rem;
+  border-radius:50% ;
+background: rgba(255, 255, 255, 0.15); }
