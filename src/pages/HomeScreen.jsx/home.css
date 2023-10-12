@@ -1,0 +1,193 @@
+.HomeComponent{
+    /* margin-top: 5rem; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 3rem;
+    top: 0;
+    height: 95%;
+    position: relative;
+    /* background-color: blue; */
+}
+.HomeComponent .greetings p{
+    color: #FFF;
+        font-family: Inter;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+}
+
+.HomeComponent .greetings h2{
+color: #FFF;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+/* USERCARD */
+.usercard {
+    border-radius: 1.25rem;
+    background: #2F7E79;
+    width: 95%;
+    height: fit-content;
+    flex-shrink: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:2.5rem 1rem;
+    gap: 1rem;
+    box-shadow: 0px 20px 20px #2f7e7994;
+}
+.totalBalance h2{
+color: #FFF;
+font-family: Inter;
+font-size: 1.875rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.09375rem;
+}
+.totalBalance p{
+color: #FFF;
+font-family: Inter;
+font-size: 1rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.02rem;
+}
+.expenseNIncome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.income,
+.expense {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.income span,
+.expense span {
+    display: flex;
+    gap: .4rem;
+}
+
+.income h2,
+.expense h2 {
+    width: 100%;
+    flex: 1;
+color: #FFF;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.0625rem;
+}
+.income p, .expense p{
+color: #D0E5E4;
+text-align: right;
+font-family: Inter;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.05625rem;
+}
+
+.income svg,
+.expense svg {
+    /* font-size: 30rem; */
+    padding: .2rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* TRANSACTION HISTORY */
+.transactionHistory{
+    /* background-color:blue; */
+    height: 100%;
+    margin-top: 1rem;
+    overflow-y: auto;
+}
+.top h4{
+color: #222;
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.0225rem;
+    text-transform: capitalize;
+}
+.top a{
+color: var(--Secondary, #666);
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.0175rem;
+    text-decoration: none;
+}
+.transaction-list h4{
+color: #000;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.02rem;
+    text-transform: capitalize;
+}
+.transaction-list p{
+color: var(--Secondary, #666);
+    font-family: Inter;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.01625rem;
+    text-transform: capitalize;
+}
+.transaction-list .prices{
+color: #25A969;
+    text-align: right;
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.045rem;
+    text-transform: capitalize;
+}
+
+.transactionHistory .transactions {
+    /* background-color:red; */
+    padding: .8rem;
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+    transition: ease .3s;
+}
+.transactionHistory .transactions:hover {
+    background: #29756F;
+    color: white;
+    cursor: pointer;
+    /* display: none; */
+}
+.transactionHistory .transactions:hover p,
+.transactionHistory .transactions:hover h4,
+.transactionHistory .transactions:hover .prices {
+    color: white;
+}

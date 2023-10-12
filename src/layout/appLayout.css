@@ -1,6 +1,31 @@
+ .appLayout {
+     background: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     height: 100vh;
+     width: 100%;
+     position: relative;
+ }
+
+ .content {
+     height: 90%;
+     /* background-color:blue; */
+     position: absolute;
+     top:0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     margin: 0 auto;
+padding: 5rem 1rem 0 1rem;
+/* overflow-y: scroll; */
+     /* background-color:blue; */
+ }
 .shape{
-    width: 25.875rem;
-    height: 17.9375rem;
+    width: 100%;
+    height: 40%;
     flex-shrink: 0;
     background: linear-gradient(139deg, #429690 -4.35%, #2A7C76 100.15%);
     border-radius:  0 0 8.5rem 8.5rem;

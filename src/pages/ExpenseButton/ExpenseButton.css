@@ -1,0 +1,26 @@
+.expense-btn-div{
+    
+ position: absolute;
+    /* background-color:red; */
+    bottom: -8%;
+    left: 40%;
+   
+    
+}
+.expense-btn{
+    
+                background: #438883;
+                color: white;
+                font-size: 25rem;
+                padding: 1.3rem; 
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 0 10px 20px 1px #1f615b7b;
+                /* position: inherit;
+                left: 50%;
+                right: 50%;
+                top: 10%; */
+           
+}

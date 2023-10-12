@@ -14,7 +14,7 @@ export default function Navbar() {
         </NavLink>
       </div>
       <div className="profileNwallet">
-        <NavLink to="homeiie">
+        <NavLink to="/wallet">
           <FaWallet />
         </NavLink>
         <NavLink to="homeiiiie">

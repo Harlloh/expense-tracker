@@ -2,38 +2,13 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Home from "../pages/HomeScreen.jsx/Home";
-import useGetDaytime from "../hooks/useGetDaytime";
+import Wallet from "../pages/wallet/Wallet";
 import "./appLayout.css";
 
 export default function AppLayout() {
-  const dayTime = useGetDaytime();
   return (
     <div className="appLayout">
-      {/* the green shape ontop */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="414"
-        height="287"
-        viewBox="0 0 414 287"
-        fill="none"
-      >
-        <path
-          d="M0 0H414V261.759C414 261.759 366 287 207 287C48 287 0 261.759 0 261.759V0Z"
-          fill="url(#paint0_linear_1_406)"
-        />
-        <defs>
-          <linearGradient
-            id="paint0_linear_1_406"
-            x1="-10.5"
-            y1="-17.0712"
-            x2="239.544"
-            y2="393.953"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#429690" />
-            <stop offset="1" stop-color="#2A7C76" />
-          </linearGradient>
-        </defs>
+      <div className="shape">
         <svg
           className="circles1"
           xmlns="http://www.w3.org/2000/svg"
@@ -115,11 +90,13 @@ export default function AppLayout() {
             </linearGradient>
           </defs>
         </svg>{" "}
-        {dayTime}
-      </svg>
-      <Routes>
-        <Route index element={<Home />}></Route>
-      </Routes>
+      </div>
+      <div className="content">
+        <Routes>
+          <Route index element={<Home />}></Route>
+          <Route path="wallet" element={<Wallet />}></Route>
+        </Routes>
+      </div>
       <Navbar />
     </div>
   );
