@@ -11,15 +11,17 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const navigate = useNavigate();
   const handleSignIn = async () => {
-    // const result = await signInWithPopup(auth, provider);
-    // const userInfo = {
-    //   userId: result.user.uid,
-    //   name: result.user.displayName,
-    //   profilePhoto: result.user.photoURL,
-    //   isAuth: true,
-    // };
-    // Cookies.set(userInfo);
-    navigate("/home");
+    const result = await signInWithPopup(auth, provider);
+    const userInfo = {
+      userId: result.user.uid,
+      name: result.user.displayName,
+      profilePhoto: result.user.photoURL,
+      isAuth: true,
+    };
+    Cookies.set(JSON.stringify(userInfo));
+    if (userInfo.isAuth) {
+      navigate("/home");
+    }
   };
   return (
     <div className="login-div">
