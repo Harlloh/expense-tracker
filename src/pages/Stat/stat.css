@@ -1,0 +1,76 @@
+.stat{
+    background-color: white;
+    height: 100%;
+    position: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    width: 100%;
+    /* background-color:red; */
+}
+.btns button{
+color: var(--Secondary, #666);
+color: white;
+    font-family: Inter;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+        width: 20%;
+        height: 2.5rem;
+        padding: 0.625rem;
+        border-radius: 10px;
+        border: none;
+}
+select{
+    padding: 0.625rem;
+    border-radius: 10px;
+    border-color: #666;
+    display: flex;
+    justify-self: flex-end;
+    align-items: end;
+    margin-left:  auto;
+    align-self: flex-end;
+}
+.top-spending{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-spending h3{
+    color: #222;
+        font-family: Inter;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.0225rem;
+        text-transform: capitalize;
+}
+.top-spending svg{
+    color: #666666;
+}
+/* Add this to your CSS file */
+.selected-button {
+    background-color: #438883;
+    /* Change to your preferred background color */
+    color: white;
+    color: white;
+    font-weight: bold;
+}
+button .selected-button{
+    color: white;
+}

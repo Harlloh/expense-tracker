@@ -1,9 +1,13 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Home from "../pages/HomeScreen.jsx/Home";
 import Wallet from "../pages/wallet/Wallet";
 import "./appLayout.css";
+import AddTransaction from "../pages/AddTransaction/AddTransaction";
+import Profile from "../pages/Profile/Profile";
+import Stat from "../pages/Stat/Stat";
+import TransactionDetails from "../pages/TransactionDetails/TransactionDetails";
 
 export default function AppLayout() {
   return (
@@ -92,10 +96,17 @@ export default function AppLayout() {
         </svg>{" "}
       </div>
       <div className="content">
-        <Routes>
-          <Route index element={<Home />}></Route>
-          <Route path="wallet" element={<Wallet />}></Route>
-        </Routes>
+        {/* <Routes>
+          <Route index element={<Home />} />
+          <Route path="addTransaction" element={<AddTransaction />} />
+          <Route path="stats" element={<Stat />} />
+          <Route path="profile" element={<Profile />} />
+          <Route
+            path="transactionDetails/:id"
+            element={<TransactionDetails />}
+          />
+        </Routes> */}
+        <Outlet />
       </div>
       <Navbar />
     </div>

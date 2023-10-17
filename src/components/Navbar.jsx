@@ -6,18 +6,18 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="homeNStat">
-        <NavLink to="/home">
+        <NavLink to="home">
           <FaHome />
         </NavLink>
-        <NavLink to="homeie">
+        <NavLink to="stats">
           <FaChartBar />
         </NavLink>
       </div>
       <div className="profileNwallet">
-        <NavLink to="/wallet">
+        <NavLink to="wallet">
           <FaWallet />
         </NavLink>
-        <NavLink to="homeiiiie">
+        <NavLink to="profile">
           <FaUser />
         </NavLink>
       </div>

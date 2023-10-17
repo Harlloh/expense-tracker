@@ -1,8 +1,21 @@
-import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
+import { Box, CircularProgress, Stack, Typography } from "@mui/material";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useGetTransactions } from "../../hooks/useGetTransactions";
+import { useGetDate } from "../../hooks/useGetDate";
+import TransactionCard from "../../components/TransactionCard";
 
 export default function TransactionHistory() {
+  const { transactions } = useGetTransactions();
+
+  const [sortedTransactions, setSortedTransactions] = useState([]);
+
+  useEffect(() => {
+    // Sort the transactions by createAt timestamp to display the most recent on top
+    const sorted = [...transactions].sort((a, b) => b.createAt - a.createAt);
+    setSortedTransactions(sorted);
+  }, [transactions]);
+
   return (
     <div
       className="transactionHistory"
@@ -15,216 +28,21 @@ export default function TransactionHistory() {
         className="top"
       >
         <h4>Transactions History</h4>
-        <Link to="#">see all</Link>
       </Stack>
-      {/* TRANSACTION LIST */}
-      <Stack direction={"column"}>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            gap=".2rem"
-            sx={{ justifyContent: "space-between", alignItems: "center" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-        <NavLink to="transactions/id" className="transactions">
-          <Stack
-            direction="row"
-            className="transaction-list"
-            sx={{ justifyContent: "space-between" }}
-          >
-            <Stack>
-              <h4>Upwork</h4>
-              <p>DateNTime</p>
-            </Stack>
-            <Box>
-              <Typography variant="h6" className="prices">
-                +$ 850,000
-              </Typography>
-            </Box>
-          </Stack>
-        </NavLink>
-      </Stack>
+      {/* Show loading spinner while transactions are loading */}
+      {Object.keys(sortedTransactions).length === 0 ? (
+        <div>
+          <h4>You have not tracked any expense/income yet</h4>
+          <p>click the plus sign to add transactions</p>
+          <CircularProgress color="primary" size={50} thickness={4} />
+        </div>
+      ) : (
+        <Stack direction={"column"}>
+          {sortedTransactions.map((transaction, index) => {
+            return <TransactionCard transaction={transaction} />;
+          })}
+        </Stack>
+      )}
     </div>
   );
 }

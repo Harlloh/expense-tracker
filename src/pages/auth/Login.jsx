@@ -12,21 +12,23 @@ export default function Login() {
   const navigate = useNavigate();
   const handleSignIn = async () => {
     const result = await signInWithPopup(auth, provider);
+    console.log(result);
     const userInfo = {
       userId: result.user.uid,
       name: result.user.displayName,
+      email: result.user.email,
       profilePhoto: result.user.photoURL,
       isAuth: true,
     };
-    Cookies.set(JSON.stringify(userInfo));
+    Cookies.set("auth", JSON.stringify(userInfo));
     if (userInfo.isAuth) {
-      navigate("/home");
+      navigate("/app/home");
     }
   };
   return (
     <div className="login-div">
       <div className="login-image-div">
-        <Img
+        <img
           src={image}
           alt=""
           className="login-image"

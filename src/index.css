@@ -17,12 +17,13 @@
     width: 100%;
     height: 10%;
     padding: .5rem;
+    z-index: 1;
     /* opacity: .2; */
    /* background-color: red; */
  }
  .navbar a svg{
    color:#AAAAAA;
-   font-size: 3rem;
+   font-size: 2.3rem;
  }
  .navbar a.active svg{
    color: #408782;
@@ -32,4 +33,79 @@
    justify-content: space-around;
    gap: .5rem;
    width: 50%;
+ }
+
+ .top {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   padding: 0 1rem;
+   align-items: center;
+ }
+ .top p {
+   color: #FFF;
+   text-align: center;
+   font-family: Inter;
+   font-size: 1.125rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+ }
+
+ .transaction-list h4 {
+   color: #000;
+   font-family: Inter;
+   font-size: 1rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   letter-spacing: -0.02rem;
+   text-transform: capitalize;
+ }
+
+ .transaction-list p {
+   color: var(--Secondary, #666);
+   font-family: Inter;
+   font-size: 0.8125rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   letter-spacing: -0.01625rem;
+   text-transform: capitalize;
+ }
+
+ .transaction-list .prices {
+   color: #25A969;
+   text-align: right;
+   font-family: Inter;
+   font-size: 1.125rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+   letter-spacing: -0.045rem;
+   text-transform: capitalize;
+ }
+
+ .transactions {
+   /* background-color:red; */
+   padding: .8rem;
+   border-radius: 10px;
+   color: black;
+   text-decoration: none;
+   transition: ease .3s;
+   box-shadow: 2px 2px 2px gray;
+   margin-top: .5rem;
+ }
+
+ .transactions:hover {
+   background: #29756F;
+   color: white;
+   cursor: pointer;
+   /* display: none; */
+ }
+
+ .transactions:hover p,
+ .transactions:hover h4,
+ .transactions:hover .prices {
+   color: white;
  }

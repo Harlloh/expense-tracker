@@ -1,8 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import RootLayout from "./layout/RootLayout";
-import Login from "./pages/auth/Login";
+import React from "react";
 import {
   Route,
   RouterProvider,
@@ -10,29 +6,41 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Welcome from "./pages/WelcomeScreen/Welcome";
-import Home from "./pages/HomeScreen.jsx/Home";
+import Login from "./pages//auth/Login";
+import RootLayout from "./layout/RootLayout";
 import AppLayout from "./layout/AppLayout";
+import Home from "./pages/HomeScreen.jsx/Home";
+import Profile from "./pages/Profile/Profile";
+import Stat from "./pages/Stat/Stat";
+import AddTransaction from "./pages/AddTransaction/AddTransaction";
 import Wallet from "./pages/wallet/Wallet";
+import TransactionDetails from "./pages/TransactionDetails/TransactionDetails";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
-        <Route exact path="/" element={<RootLayout />}>
-          <Route exact index element={<Welcome />} />
-          <Route exact path="login" element={<Login />} />
-          <Route exact path="home" element={<AppLayout />} />
-          {/* <Route exact path="wallet" element={<Wallet />} /> */}
+        <Route element={<RootLayout />}>
+          <Route index element={<Welcome />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+        <Route path="app/*" element={<AppLayout />}>
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="stats" element={<Stat />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="wallet" element={<Wallet />} />
+          <Route path="addTransaction" element={<AddTransaction />} />
+          <Route
+            path="transactionDetails/:id"
+            element={<TransactionDetails />}
+          />
         </Route>
       </Route>
     )
   );
 
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

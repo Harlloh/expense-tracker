@@ -1,0 +1,87 @@
+.addTransactionDiv{
+    /* background-color:red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.addTransactionDiv .top{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+}
+.addTransactionDiv .top p{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;}
+
+form{
+    width: 90%;
+    display: flex;
+        flex-direction: column;
+align-items: center;
+gap:5rem;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem ;
+    border-radius: 1.25rem;
+        background: #FFF;
+        box-shadow: 0px 22px 35px 0px rgba(0, 0, 0, 0.231);
+            height: fit-content;
+            flex-shrink: 0;
+            gap: 2rem;
+}
+.form .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.form .inputs input[type='text'], form .inputs input[type='number'],form .inputs input[type='date']{
+    width: 100%;
+        height: 3.125rem;
+        flex-shrink: 0;
+        border-radius: 0.5rem;
+            border: 1px solid #DDD;
+            padding: 0 .5rem;
+}
+.form  label{
+color: var(--Secondary, #666);
+font-family: Inter;
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.045rem;
+}
+.expense-radio, .income-radio{
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.addTransactionDiv button{
+    background: linear-gradient(#429690,
+        #2A7C76);
+        color: white;
+        width: 90%;
+        border: none;
+        border-radius: 10px;
+        height: 3.5rem;
+        cursor: pointer;
+        text-align: center;
+        font-family: Inter;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+}
