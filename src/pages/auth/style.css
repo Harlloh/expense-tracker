@@ -185,6 +185,7 @@ color: white;
 margin-top: 1rem;
 border: none;
 background: linear-gradient(180deg, #69AEA9 -17.19%, #3F8782 123.44%);
+box-shadow: 2px 2px 5px rgb(91, 89, 89);
 }
 .register form p{
 color: var(--Paragraph, white);

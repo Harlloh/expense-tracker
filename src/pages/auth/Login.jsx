@@ -14,7 +14,7 @@ import { useAuthSignIn } from "../../hooks/useSignInUser";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
-  const [verifiedEmail, setVerifiedEmail] = useState(false);
+  // const [verifiedEmail, setVerifiedEmail] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -28,59 +28,8 @@ export default function Login() {
     }));
   };
 
-  // const navigate = useNavigate();
   const { signInWithEmail, signInWithGoogle, create, errorMessage } =
     useAuthSignIn();
-  // const handleSignInWithGoogle = async () => {
-  //   try {
-  //     const result = await signInWithPopup(auth, provider);
-  //     const userInfo = {
-  //       userId: result.user.uid,
-  //       name: result.user.displayName,
-  //       email: result.user.email,
-  //       profilePhoto: result.user.photoURL,
-  //       verified: result.user.emailVerified,
-  //       isAuth: true,
-  //     };
-  //     Cookies.set("auth", JSON.stringify(userInfo));
-  //     console.log(result);
-  //     if (result.user.emailVerified) {
-  //       navigate("/app/home");
-  //     } else {
-  //       toast.error("Please verify your email address");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error while signing in with Google:", error);
-  //   }
-  // };
-  const navigate = useNavigate();
-  // const handleSignInWithEmail = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const result = await signInWithEmailAndPassword(
-  //       auth,
-  //       formData.email,
-  //       formData.password
-  //     );
-  //     const userInfo = {
-  //       userId: result.user.uid,
-  //       name: result.user.displayName,
-  //       email: result.user.email,
-  //       profilePhoto: result.user.photoURL,
-  //       verified: result.user.emailVerified,
-  //       isAuth: true,
-  //     };
-  //     Cookies.set("auth", JSON.stringify(userInfo));
-
-  //     if (result.user.emailVerified) {
-  //       navigate("/app/home");
-  //     } else {
-  //       toast.error("Please verify your email address");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error while signing in with email and password:", error);
-  //   }
-  // };
 
   return (
     <div className="register">
@@ -89,7 +38,6 @@ export default function Login() {
       <form
         action=""
         onSubmit={(e) => signInWithEmail(e, formData.email, formData.password)}
-        // onSubmit={handleSignInWithEmail}
       >
         <h2>Welcome</h2>
         <p>Welcome back! Sign in to your account.</p>
@@ -124,11 +72,8 @@ export default function Login() {
           <Link to="/forgotPassword">Forgot Password?</Link>
         </p>
         {errorMessage && <p id="error-message">{errorMessage}</p>}
-        <button type="submit" disabled={verifiedEmail}>
-          {create ? "Logging in..." : "Log in"}
-        </button>
+        <button type="submit">{create ? "Logging in..." : "Log in"}</button>
         <p>or</p>
-        {/* <button onClick={handleSignInWithGoogle}>Sign in with Google</button> */}
         <button onClick={signInWithGoogle}>Sign in with Google</button>
         <p>
           Don't have an account? <Link to="/signup">Sign up</Link>

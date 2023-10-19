@@ -20,8 +20,6 @@ import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 
 export default function AppLayout() {
-  const { profilePhoto } = useGetUserInfo();
-  console.log(profilePhoto);
   return (
     <div className="appLayout">
       <div className="shape">
@@ -112,7 +110,5 @@ export default function AppLayout() {
       </div>
       <Navbar />
     </div>
-    // ) : (
-    //   <Navigate to="login" />
   );
 }
