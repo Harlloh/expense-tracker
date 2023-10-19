@@ -1,0 +1,12 @@
+.wallet-div{
+    color: white;
+
+}
+.wallet-div h3{
+    font-size: 2rem;
+    font-family: Inter;
+}
+.wallet-div p{
+    font-size: .91rem;
+    font-family: inter;
+}

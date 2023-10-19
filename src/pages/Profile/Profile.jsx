@@ -13,15 +13,16 @@ import { auth } from "../../config/firebase-config";
 import { signOut } from "firebase/auth";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { useAuthSignIn } from "../../hooks/useSignInUser";
 
 export default function Profile() {
   const { name, email, profilePhoto } = useGetUserInfo();
+  const { signUserOut } = useAuthSignIn();
   const navigate = useNavigate();
   const handleUserSignOut = async () => {
     try {
-      await signOut(auth);
-      Cookies.remove();
-      navigate("/");
+      await signUserOut();
+      navigate("/login");
     } catch (error) {
       console.log(error);
     }
@@ -30,7 +31,10 @@ export default function Profile() {
     <div className="profile-div">
       <TopBar p="Profile" />
       <div className="image">
-        <img src={profilePhoto} alt="" />
+        <img
+          src={profilePhoto ? profilePhoto : "../../assets/woman.png"}
+          alt=""
+        />
         <h3>{name}</h3>
         <p>{email} </p>
       </div>

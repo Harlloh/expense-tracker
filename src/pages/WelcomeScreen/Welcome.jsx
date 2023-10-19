@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 export default function Welcome() {
   return (
     <Link
-      to="login"
+      to="reg"
       className="splash-screen"
       style={{ display: "flex", flexDirection: "column" }}
     >

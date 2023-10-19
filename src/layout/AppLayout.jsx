@@ -1,5 +1,12 @@
-import React from "react";
-import { Outlet, Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import {
+  Navigate,
+  Outlet,
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Home from "../pages/HomeScreen.jsx/Home";
 import Wallet from "../pages/wallet/Wallet";
@@ -8,8 +15,13 @@ import AddTransaction from "../pages/AddTransaction/AddTransaction";
 import Profile from "../pages/Profile/Profile";
 import Stat from "../pages/Stat/Stat";
 import TransactionDetails from "../pages/TransactionDetails/TransactionDetails";
+import { useGetUserInfo } from "../hooks/useGetUserInfo";
+import { useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
 
 export default function AppLayout() {
+  const { profilePhoto } = useGetUserInfo();
+  console.log(profilePhoto);
   return (
     <div className="appLayout">
       <div className="shape">
@@ -96,19 +108,11 @@ export default function AppLayout() {
         </svg>{" "}
       </div>
       <div className="content">
-        {/* <Routes>
-          <Route index element={<Home />} />
-          <Route path="addTransaction" element={<AddTransaction />} />
-          <Route path="stats" element={<Stat />} />
-          <Route path="profile" element={<Profile />} />
-          <Route
-            path="transactionDetails/:id"
-            element={<TransactionDetails />}
-          />
-        </Routes> */}
         <Outlet />
       </div>
       <Navbar />
     </div>
+    // ) : (
+    //   <Navigate to="login" />
   );
 }
