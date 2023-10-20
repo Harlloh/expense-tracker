@@ -99,7 +99,6 @@ export default function SignUp() {
           <div className="inputs">
             <input
               type="text"
-              required
               placeholder="Display name..."
               value={formData.displayName}
               onChange={handleChange}

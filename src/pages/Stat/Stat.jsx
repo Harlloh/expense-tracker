@@ -173,7 +173,10 @@ export default function Stat() {
             <CircularProgress color="primary" size={50} thickness={4} />
           </div>
         ) : (
-          <Stack direction={"column"} sx={{ height: "60%", overflowY: "auto" }}>
+          <Stack
+            direction={"column"}
+            sx={{ height: "fit-content", overflowY: "scroll" }}
+          >
             {/* Mapping and rendering individual TransactionCard components */}
             {sortedTransactions.map((transaction, index) => {
               return <TransactionCard transaction={transaction} key={index} />;
