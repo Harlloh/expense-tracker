@@ -4,10 +4,7 @@
   padding: 0;
   box-sizing: border-box;
  }
-/* 
- body{
-    overflow-x: hidden;
- } */
+
  .navbar{
    display: flex;
    justify-content: space-between;
@@ -18,7 +15,7 @@
     height: 10%;
     padding: .5rem;
     z-index: 1;
-    /* opacity: .2; */
+
    /* background-color: red; */
  }
  .navbar a svg{
